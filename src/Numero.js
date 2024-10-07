@@ -1,4 +1,5 @@
 const Numero = () => {
+    const pair = ["2", "4", "6", "8", "0"]
     const num = [
         "1",
         "2",
@@ -14,7 +15,9 @@ const Numero = () => {
 
     return(
         <ul>
-            {num.map((n) => (
+            {num
+            .filter((paire) => pair.includes(paire))
+            .map((n) => (
                 <li>{n}</li>
             ))}
         </ul>
